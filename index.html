@@ -1,0 +1,197 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HEAD -->
+<head id="top">
+    <meta charset="UTF-8">
+    <title>Kara Dailey</title>
+
+    <!-- Responsive Web Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/gridiculous.css" type="text/css">
+    <link href="css/hover-min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        /* Scroll button appears on scroll */
+        $(window).scroll(function(){
+          if ($(this).scrollTop() > 20) {
+              $('#scrollTop').removeClass('no-display');
+          } else {
+              $('#scrollTop').addClass('no-display');
+          }
+        });
+
+        /* Smooth Scrolling */
+        $(document).ready(function(){
+          $("a").on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 500, function(){
+                    window.location.hash = hash;
+                });
+            }
+          });
+        });
+
+        /* Back button appears on scroll */
+        $(window).scroll(function(){
+          if ($(this).scrollTop() > 20) {
+              $('#back').removeClass('no-display');
+          } else {
+              $('#back').addClass('no-display');
+          }
+        });
+    </script>
+
+    <!-- Webpage Icons -->
+    <link rel="icon" type="image/x-icon" href="klogo.ico"/>
+    <link rel="icon" type="image/png" href="klogo.png"/>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113009253-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-113009253-1');
+  </script>
+
+<!-- WEBPAGE -->
+<!-- Header -->
+<header>
+    <!-- Nav -->
+    <div class="row">
+        <div class="c1"></div>
+        <div class="c10">
+            <a href="index.html">
+                <img src="klogo.png" class="zklogo"/>
+                <div id="name">Kara Dailey</div>
+            </a>
+            <div class="optionList" style="float: right">
+                <h3 class="option selected">work</h3>
+                <h3 class="option"><a href="about.html">about</a></h3>
+                <h3 class="option"><a target="_blank" href="kdaileyresume.pdf">resume</a></h3>
+            </div>
+        </div>
+        <div class="c1"></div>
+    </div>
+    <!-- Title -->
+    <div class="row">
+        <div class="c1"></div>
+        <div class="c10">
+            <h1 class="title">
+                MS student at <a href="https://www.si.umich.edu/" target="_blank" style="color: #FFCB05">Michigan</a>.<br>
+                <span style="font-size: 16px">(Aspiring)</span> UX <a href="https://www.instagram.com/dailey_made/" target="_blank" style="color: #000000">Designer</a>.
+            </h1>
+        </div>
+        <div class="c1"></div>
+    </div>
+  </header>
+
+<body>
+    <div class="row">
+        <div class="c1"></div>
+        <div class="c10 work">
+            <!-- Makeathon -->
+            <a href="makeathon.html"><div class="project left makeathon hvr-float">
+                <img src="work/makeathon/makeathonmockup.png">
+                <h2>Happy Pod</h2>
+                <p class="caption">Go to your happy place. <p>
+            </div></a>
+
+            <!-- Grouper -->
+            <a href="Grouper/index.html"><div class="project right grouper hvr-float">
+                <img src="work/grouper/groupermockup.png">
+                <h2>Grouper</h2>
+                <p class="caption">Making orientation less awkward.<p>
+            </div></a>
+
+            <!-- Incentivize -->
+            <a href="incentivize.html"><div class="project left incentivize hvr-float">
+                <img src="work/incentivize/incentivize.png">
+                <h2>Incentivize</h2>
+                <p class="caption">Gamifying motivation.</p>
+            </div></a>
+
+            <!-- Ft.Myers -->
+            <a href="ftmyers.html"><div class="project right ftmyers hvr-float">
+                <img src="work/ftmyers/ftmyers.png">
+                <h2>InfoLab</h2>
+                <p class="caption">Government IA Research</p>
+            </div></a>
+
+            <!-- LoJack -->
+            <a href="lojack.html"><div class="project left lojack hvr-float">
+                <img src="work/lojack/lojack.png">
+                <h2>Lojack</h2>
+                <p class="caption">Work Before Grad School</p>
+            </div></a>
+
+            <!-- WCBN-->
+            <a href="wcbnreport.pdf"><div class="project right wcbn hvr-float">
+                <img src="work/wcbn/wcbn.png">
+                <h2>WCBN</h2>
+                <p class="caption">UX  Research Consulting Report</p>
+            </div></a>
+
+            <!-- Pilot.ly-->
+            <a href="pilotly.html"><div class="project left pilotly hvr-float">
+                <img src="work/pilotly/pilotly.png">
+                <h2>Pilot.ly</h2>
+                <p class="caption">UX assesment & evaluation</p>
+            </div></a>
+
+            <!-- Designs -->
+            <a href="designs.html"><div class="project right designs hvr-float ">
+                <img src="work/designs/designsmockup.png">
+                <h2>Designs</h2>
+                <p class="caption">Graphic designs for client and personal use.</p>
+            </div></a>
+
+            <!-- photos -->
+            <a href="photos.html"><div class="project left photos hvr-float ">
+              <img src="work/photos/photos.png">
+                <h2>Photos</h2>
+                <p class="caption"> </p>
+            </div></a>
+        </div>
+        <div class="c1"></div>
+    </div>
+
+    <!-- Scroll To Top -->
+    <div class="c1">
+        <a href="#top" class="no-display" id="scrollTop"></a>
+    </div>
+</body>
+
+<footer>
+    <div class="row">
+        <div class="c1"></div>
+        <div class="c6">
+            <h4>If you’re looking to work with me or simply need coffee recommendations, feel free to email me at <a href="mailto:kadailey@umich.edu?subject=Hey!" target="_blank">kadailey@umich.edu</a>.</h4>
+        </div>
+        <div class="c2"></div>
+        <div class="c2">
+            <h4 class="links">
+              <a href="https://twitter.com/k_dails"  target="_blank"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com/dailey_made/" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.instagram.com/k_dails/" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/karadailey/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </h4>
+        </div>
+        <div class="c1"></div>
+    </div>
+</footer>
+</html>
