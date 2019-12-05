@@ -1,0 +1,238 @@
+<!-- arvr.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HEAD -->
+<head id="top">
+    <meta charset="UTF-8">
+    <title>AR/VR · Kara Dailey</title>
+
+    <!-- Responsive Web Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/gridiculous.css" type="text/css">
+    <link href="css/hover-min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        /* Scroll button appears on scroll */
+        $(window).scroll(function(){
+          if ($(this).scrollTop() > 20) {
+              $('#scrollTop').removeClass('no-display');
+          } else {
+              $('#scrollTop').addClass('no-display');
+          }
+        });
+        /* Smooth Scrolling */
+        $(document).ready(function(){
+          $("a").on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 500, function(){
+                    window.location.hash = hash;
+                });
+            }
+          });
+        });
+        /* Back button appears on scroll */
+        $(window).scroll(function(){
+          if ($(this).scrollTop() > 20) {
+              $('#back').removeClass('no-display');
+          } else {
+              $('#back').addClass('no-display');
+          }
+        });
+    </script>
+
+    <!-- Webpage Icons -->
+    <link rel="icon" type="image/x-icon" href="klogo.ico"/>
+    <link rel="icon" type="image/png" href="klogo.png"/>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113009253-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-113009253-1');
+  </script>
+
+<!-- WEBPAGE -->
+<!-- Header -->
+<header>
+    <!-- Nav -->
+    <div class="row">
+        <div class="c1"></div>
+        <div class="c10">
+            <a href="index.html">
+                <img src="klogo.png" class="zklogo"/>
+                <div id="name">Kara Dailey</div>
+            </a>
+            <div class="optionList" style="float: right">
+                <h3 class="option"><a href="index.html">work</a></h3>
+                <h3 class="option"><a href="about.html">about</a></h3>
+                <h3 class="option"><a target="_blank" href="kdaileyresume.pdf">resume</a></h3>
+            </div>
+        </div>
+        <div class="c1"></div>
+    </div>
+    <!-- Title -->
+    <div class="row">
+        <div class="c1"></div>
+        <div class="c10">
+            <h1 class="incentivizetitle title">
+                AR/VR<br>
+                Designing for AR/VR Interactions<br>
+            </h1>
+        </div>
+        <div class="c1"></div>
+    </div>
+  </header>
+
+<body>
+    <!-- Summary -->
+    <div class="row">
+        <div class="c1"></div>
+        <div class="c5">
+            <p>
+            <span style="font-family: SFUI Bold">Overview</span><br>
+           SI 559 is a course that centralized around learning and thinking about designing for AR/VR. This is a graduate level course that focuses on group projects and teamwork to approach certain problems with a solution in AR/VR design. 
+            </p>
+
+            <p>
+            <span style="font-family: SFUI Bold">Role</span><br>
+            Interaction Designer<br>
+            AR Interaction developer
+            UX Researcher
+            </p>
+
+            <p>
+            <span style="font-family: SFUI Bold">Timeline</span><br>
+            Fall 2019<br>
+            4 months of low-mid-high fidelity iterations, user testing, competitive analysis, sketching, storyboarding and development on two different projects, 1 in AR and 1 in VR.
+            </p>
+        </div>
+        <div class="c5">
+            <img src="work/incentivize/process.png">
+        </div>
+        <div class="c1"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="row content">
+        <div class="c1"></div>
+        <div class="c10 divider">
+            <h1 class="incentivizetitle">VR Problem</h1>
+            <p>
+                Many people live in areas where there aren’t many opportunities to buy fresh fruits and vegetables. As a volunteer at my community garden, I’ve loved teaching people how to grow food in their own backyard. Growing food for people seems an incredibly difficult task and often times intimidating for those new to gardening. I knew that teaching gardening skills would benefit people in a few different ways but mainly to teach without any repercussions of failure or losing time and money in the process. A VR application that teaches gardening skills would be meaningful for teaching people how to grow food. 
+            </p><br>
+
+            <h1 class="incentivizetitle">Design Process</h1>
+            <p>
+                <span style="font-family: SFUI Bold">Design Process</span><br>
+                My team’s  first step for both AR and VR was to ideate how we may approach our chosen problem in terms of a physical prototype- we used clay models of the objects in our scene and set it as a first person experience as most VR applications are. After nailing down the interactions you can view in the gif below. This helped us understand positioning and interaction opportunities.
+            </p>
+
+            <img src="work/arvr/physicalproto.gif" class="projectimg" style="padding-top: 1.5em">
+            <br>
+            <p class="c12">
+                <span style="font-family: SFUI Bold">Digital Tool choice</span><br>
+                <br>In choosing my tool, I wanted a tool that was adaptable and did not intimidate me as a designer. I initially attempted to work within the constraints of unity because my development skills were a bit rusty but found the program slow and strenuous to use on my computer. I differed to my second choice, A-Frame. This was my first time using the program, I initially used glitch to write my code and run it in VR on my google cardboard headset which turned out to be a great workflow for me. You can see the gif below for an example on what my first iteration looked like: </br>
+                <img src="work/arvr/first draft.gif" class="projectimg"></p>
+                <p>
+                <br>I learned about AFRAME as a tool and how to place 3D assets in a scene which proved difficult because they were all created in various sizings and automatic positioning. The placement and interaction of the water jug and pitchfork was an uphill battle but ended up in our final design.</br>
+            </p><br>
+
+            <p class="c12">
+                <span style="font-family: SFUI Bold">Final Design</span><br>
+                Our ultimate solution includes an interaction for tilling soil, watering the soil, and picking the fruits of our digitally grown labor. There are gaze interactions and click interactions involved throughout the solution. Anything that can be interacted with will get larger if gazed at to signify interaction. There’s additionally lighting and sound that provides users with a deeper sense of immersion. 
+                <br>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/j941GU8-TCk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p class="c6">
+                <span style="font-family: SFUI Bold">Further Explorations</span><br>
+                If we had more time with this prototype, I would’ve loved the opportunity to work on informational pop ups and audio. Although there is scenery audio for immersion purposes, there is definitely a lack of education and teaching users how to actually garden. <br>
+              <p class="c6">
+                <img src="work/incentivize/qoc.png" class="projectimg">
+            </p><br>
+            <p class="c6">
+                <span style="font-family: SFUI Bold">Paper Prototype</span><br>
+                I first had to sketch out all of the interactions in my notebook and then used paper and a thick folder to create the physical prototype. The folder had a slit in the side so that I could run the paper through so the screen was able to be changed. I sketched quickly but spent my time on thinking about the interaction layout. <br>
+              <br>
+              <p class="c6">
+                <img src="work/incentivize/sketch.gif" class="projectimg">
+            </p><br>
+            <p class="c12">
+                <span style="font-family: SFUI Bold">Wireframe/ Mid Fidelity Prototype</span><br>
+                According to user feedback during my testing, the content was “too busy” at this stage. From these critiques I knew that I needed to cut down on necessary content.
+              </p>
+
+              <img src="work/incentivize/wireframe.png" class="projectimg">
+
+            <p class="c6">
+                <br><br>I also learned that the icon on the homepage was too big. I designed this as if it were going to be my final prototype but decided to iterate my design one final time because although I was happy with the interactions, I just wasn’t thrilled with the overall look and feel.
+                <br><br>At this stage it was confirmed that the incentive carrot made sense as the ask for incentives button, which was validating!
+              <br>
+              <p class="c6">
+                <img src="work/incentivize/midfidel.gif" class="projectimg">
+            </p><br>
+            <p class="c12">
+                <span style="font-family: SFUI Bold">High Fidelity Prototype</span><br>
+                I didn’t change any functionality from the MF to HF, but did move a few buttons around (Edit and Log Out) and I cut down the amount of information underneath posts on the Motivation Center. These decisions were based on user feedback. These main changes were all aesthetic choices and an update on the boring look and feel that I had in my mid-fidelity version.
+                </p>
+
+              <img src="work/incentivize/finalwireframe.png" class="projectimg">
+
+            <p class="c12">
+              <h1 class="incentivizetitle">Further Exploration</h1>
+            </p>
+            <p class="c6">
+              I set out to embed motivation and incentivization into my product as it is the backbone of the app. I knew that I could do this by challenging the idea that motivation is something that’s self-directed. I wanted to promote group based and community driven motivation so that there could be a balance between work and play for students, but I can also see this transferring to work environments and sports teams/fitness clubs as well.
+              <br>
+            </p>
+              <p class="c6">
+                <img src="work/incentivize/carrot.png" class="projectimg">
+            </p><br>
+        </div>
+        <div class="c1"></div>
+    </div>
+
+
+    <!-- Scroll To Top -->
+    <div class="c1">
+        <a href="#top" class="no-display" id="scrollTop"></a>
+        </div>
+
+    <!-- Back -->
+    <div class="c1">
+        <a href="index.html" class="no-display" id="back"></a>
+    </div>
+</body>
+
+<footer>
+    <div class="row">
+        <div class="c1"></div>
+        <div class="c6">
+          <h4>If you’re looking to work with me or simply need coffee recommendations, feel free to email me at <a href="mailto:kadailey@umich.edu?subject=Hey!" target="_blank">kadailey@umich.edu</a>.</h4>
+      </div>
+      <div class="c2"></div>
+      <div class="c2">
+          <h4 class="links">
+              <a href="https://twitter.com/k_dails"  target="_blank"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com/dailey_made/" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.instagram.com/k_dails/" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/karadailey/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          </h4>
+        </div>
+        <div class="c1"></div>
+    </div>
+</footer>
+</html>
